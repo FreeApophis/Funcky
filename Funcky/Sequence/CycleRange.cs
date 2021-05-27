@@ -19,7 +19,7 @@ namespace Funcky
         public static IEnumerable<TItem> CycleRange<TItem>(IEnumerable<TItem> sequence)
             where TItem : notnull
         {
-            var list = sequence.ToList();
+            var list = sequence.Materialize();
 
             if (list.None())
             {

@@ -10,10 +10,14 @@
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <AnalysisLevel>5</AnalysisLevel>
+        <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     </PropertyGroup>
     <PropertyGroup>
         <DefineConstants>$(DefineConstants);CONTRACTS_FULL</DefineConstants>
     </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Funcky.SourceGenerator\Funcky.SourceGenerator.csproj" OutputItemType="Analyzer" PrivateAssets="all" ReferenceOutputAssembly="false" />
+    </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" PrivateAssets="all" Condition="'$(TargetFramework)' == 'net6.0'" />
         <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Condition="'$(TargetFramework)' == 'netstandard2.0'" />

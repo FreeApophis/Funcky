@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky.Xunit", "Funcky.Xuni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky.Xunit.Test", "Funcky.Xunit.Test\Funcky.Xunit.Test.csproj", "{C2400B4E-63DD-475E-BF7B-5D5079601F51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky.SourceGenerator", "Funcky.SourceGenerator\Funcky.SourceGenerator.csproj", "{A63D22C5-4070-4A56-97E1-2D0579DE9F8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{C2400B4E-63DD-475E-BF7B-5D5079601F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2400B4E-63DD-475E-BF7B-5D5079601F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2400B4E-63DD-475E-BF7B-5D5079601F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A63D22C5-4070-4A56-97E1-2D0579DE9F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A63D22C5-4070-4A56-97E1-2D0579DE9F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A63D22C5-4070-4A56-97E1-2D0579DE9F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A63D22C5-4070-4A56-97E1-2D0579DE9F8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

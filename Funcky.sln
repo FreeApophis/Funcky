@@ -1,31 +1,33 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.438
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky", "Funcky\Funcky.csproj", "{A51E4B16-901A-4D9B-A0E1-E263FD93F2ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Funcky", "Funcky\Funcky.csproj", "{A51E4B16-901A-4D9B-A0E1-E263FD93F2ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky.Test", "Funcky.Test\Funcky.Test.csproj", "{EA10A7A1-6393-4B5F-BFF6-5937DA395141}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Funcky.Test", "Funcky.Test\Funcky.Test.csproj", "{EA10A7A1-6393-4B5F-BFF6-5937DA395141}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C37116A-BC6E-451C-B5E3-76A70F1BE590}"
-ProjectSection(SolutionItems) = preProject
-	changelog.md = changelog.md
-	README.md = README.md
-	.gitignore = .gitignore
-	.editorconfig = .editorconfig
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		changelog.md = changelog.md
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Config", "Build Config", "{DD8F8450-BE23-4D6B-9C5C-7AED0ABB7531}"
-ProjectSection(SolutionItems) = preProject
-	Directory.Build.props = Directory.Build.props
-	global.json = global.json
-	Packages.props = Packages.props
-	FrameworkFeatureConstants.props = FrameworkFeatureConstants.props
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		FrameworkFeatureConstants.props = FrameworkFeatureConstants.props
+		global.json = global.json
+		Packages.props = Packages.props
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky.Xunit", "Funcky.Xunit\Funcky.Xunit.csproj", "{F2E98B0D-CC17-4576-89DE-065FF475BE6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Funcky.Xunit", "Funcky.Xunit\Funcky.Xunit.csproj", "{F2E98B0D-CC17-4576-89DE-065FF475BE6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky.Xunit.Test", "Funcky.Xunit.Test\Funcky.Xunit.Test.csproj", "{C2400B4E-63DD-475E-BF7B-5D5079601F51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Funcky.Xunit.Test", "Funcky.Xunit.Test\Funcky.Xunit.Test.csproj", "{C2400B4E-63DD-475E-BF7B-5D5079601F51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky.Shared", "Funcky.Shared\Funcky.Shared.csproj", "{25ED8BF6-8E81-4611-9D11-D410B6A4AB0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{C2400B4E-63DD-475E-BF7B-5D5079601F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2400B4E-63DD-475E-BF7B-5D5079601F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2400B4E-63DD-475E-BF7B-5D5079601F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25ED8BF6-8E81-4611-9D11-D410B6A4AB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25ED8BF6-8E81-4611-9D11-D410B6A4AB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25ED8BF6-8E81-4611-9D11-D410B6A4AB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25ED8BF6-8E81-4611-9D11-D410B6A4AB0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

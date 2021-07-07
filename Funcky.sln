@@ -1,31 +1,43 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.438
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky", "Funcky\Funcky.csproj", "{A51E4B16-901A-4D9B-A0E1-E263FD93F2ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Funcky", "Funcky\Funcky.csproj", "{A51E4B16-901A-4D9B-A0E1-E263FD93F2ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky.Test", "Funcky.Test\Funcky.Test.csproj", "{EA10A7A1-6393-4B5F-BFF6-5937DA395141}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Funcky.Test", "Funcky.Test\Funcky.Test.csproj", "{EA10A7A1-6393-4B5F-BFF6-5937DA395141}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C37116A-BC6E-451C-B5E3-76A70F1BE590}"
-ProjectSection(SolutionItems) = preProject
-	changelog.md = changelog.md
-	README.md = README.md
-	.gitignore = .gitignore
-	.editorconfig = .editorconfig
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		changelog.md = changelog.md
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Config", "Build Config", "{DD8F8450-BE23-4D6B-9C5C-7AED0ABB7531}"
-ProjectSection(SolutionItems) = preProject
-	Directory.Build.props = Directory.Build.props
-	global.json = global.json
-	Packages.props = Packages.props
-	FrameworkFeatureConstants.props = FrameworkFeatureConstants.props
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		FrameworkFeatureConstants.props = FrameworkFeatureConstants.props
+		global.json = global.json
+		Packages.props = Packages.props
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky.Xunit", "Funcky.Xunit\Funcky.Xunit.csproj", "{F2E98B0D-CC17-4576-89DE-065FF475BE6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Funcky.Xunit", "Funcky.Xunit\Funcky.Xunit.csproj", "{F2E98B0D-CC17-4576-89DE-065FF475BE6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky.Xunit.Test", "Funcky.Xunit.Test\Funcky.Xunit.Test.csproj", "{C2400B4E-63DD-475E-BF7B-5D5079601F51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Funcky.Xunit.Test", "Funcky.Xunit.Test\Funcky.Xunit.Test.csproj", "{C2400B4E-63DD-475E-BF7B-5D5079601F51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Analyzer", "Analyzer", "{BBE35279-7416-4B9D-B89D-B6D1FF369681}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky.Analyzer", "Funcky.Analyzer\Funcky.Analyzer\Funcky.Analyzer.csproj", "{8E073C3E-5F66-4951-BB3A-9AA18E02F673}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky.Analyzer.CodeFixes", "Funcky.Analyzer\Funcky.Analyzer.CodeFixes\Funcky.Analyzer.CodeFixes.csproj", "{CA137E21-7EC8-48CA-9320-A3CFBAE9504C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky.Analyzer.Package", "Funcky.Analyzer\Funcky.Analyzer.Package\Funcky.Analyzer.Package.csproj", "{F571AB63-A7BB-49DD-9195-84139E295D73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcky.Analyzer.Test", "Funcky.Analyzer\Funcky.Analyzer.Test\Funcky.Analyzer.Test.csproj", "{5E7625D1-3E01-4FD0-8893-536C7FA64B67}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Funcky.Analyzer.Vsix", "Funcky.Analyzer\Funcky.Analyzer.Vsix\Funcky.Analyzer.Vsix.csproj", "{FD669D90-63FD-4A7F-8A39-F33C5D5CA028}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,9 +61,36 @@ Global
 		{C2400B4E-63DD-475E-BF7B-5D5079601F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2400B4E-63DD-475E-BF7B-5D5079601F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2400B4E-63DD-475E-BF7B-5D5079601F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E073C3E-5F66-4951-BB3A-9AA18E02F673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E073C3E-5F66-4951-BB3A-9AA18E02F673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E073C3E-5F66-4951-BB3A-9AA18E02F673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E073C3E-5F66-4951-BB3A-9AA18E02F673}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA137E21-7EC8-48CA-9320-A3CFBAE9504C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA137E21-7EC8-48CA-9320-A3CFBAE9504C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA137E21-7EC8-48CA-9320-A3CFBAE9504C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA137E21-7EC8-48CA-9320-A3CFBAE9504C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F571AB63-A7BB-49DD-9195-84139E295D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F571AB63-A7BB-49DD-9195-84139E295D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F571AB63-A7BB-49DD-9195-84139E295D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F571AB63-A7BB-49DD-9195-84139E295D73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E7625D1-3E01-4FD0-8893-536C7FA64B67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E7625D1-3E01-4FD0-8893-536C7FA64B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E7625D1-3E01-4FD0-8893-536C7FA64B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E7625D1-3E01-4FD0-8893-536C7FA64B67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD669D90-63FD-4A7F-8A39-F33C5D5CA028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD669D90-63FD-4A7F-8A39-F33C5D5CA028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD669D90-63FD-4A7F-8A39-F33C5D5CA028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD669D90-63FD-4A7F-8A39-F33C5D5CA028}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8E073C3E-5F66-4951-BB3A-9AA18E02F673} = {BBE35279-7416-4B9D-B89D-B6D1FF369681}
+		{CA137E21-7EC8-48CA-9320-A3CFBAE9504C} = {BBE35279-7416-4B9D-B89D-B6D1FF369681}
+		{F571AB63-A7BB-49DD-9195-84139E295D73} = {BBE35279-7416-4B9D-B89D-B6D1FF369681}
+		{5E7625D1-3E01-4FD0-8893-536C7FA64B67} = {BBE35279-7416-4B9D-B89D-B6D1FF369681}
+		{FD669D90-63FD-4A7F-8A39-F33C5D5CA028} = {BBE35279-7416-4B9D-B89D-B6D1FF369681}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1F800283-D010-4227-94C9-09C02B0411DE}

@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk; Microsoft.Build.CentralPackageVersions">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <LangVersion>9.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <IsPackable>false</IsPackable>
+        <AnalysisLevel>5</AnalysisLevel>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>Funcky.Analyzer</PackageId>
+        <PackageVersion>1.0.0.0</PackageVersion>
+        <Authors>bruderer</Authors>
+        <PackageProjectUrl>https://github.com/polyadic/funcky/</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/polyadic/funcky/</RepositoryUrl>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <Description>Funcky.Analyzer</Description>
+        <Copyright>Copyright</Copyright>
+        <PackageTags>Funcky.Analyzer, analyzers</PackageTags>
+        <DevelopmentDependency>true</DevelopmentDependency>
+        <NoPackageAnalysis>true</NoPackageAnalysis>
+
+        <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Funcky.Analyzer.CodeFixes\Funcky.Analyzer.CodeFixes.csproj" />
+        <ProjectReference Include="..\Funcky.Analyzer\Funcky.Analyzer.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="tools\*.ps1" CopyToOutputDirectory="Always" Pack="true" PackagePath="" />
+    </ItemGroup>
+
+    <Target Name="_AddAnalyzersToOutput">
+        <ItemGroup>
+            <TfmSpecificPackageFile Include="$(OutputPath)\Funcky.Analyzer.dll" PackagePath="analyzers/dotnet/cs" />
+            <TfmSpecificPackageFile Include="$(OutputPath)\Funcky.Analyzer.CodeFixes.dll" PackagePath="analyzers/dotnet/cs" />
+        </ItemGroup>
+    </Target>
+
+</Project>

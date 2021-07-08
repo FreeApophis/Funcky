@@ -136,10 +136,7 @@ namespace Funcky.Extensions
             public readonly int NextStartIndex;
 
             public SplitResult(int nextStartIndex, Option<string> result = default)
-            {
-                Result = result.GetOrElse(string.Empty);
-                NextStartIndex = nextStartIndex;
-            }
+                => (Result, NextStartIndex) = (result.GetOrElse(string.Empty), nextStartIndex);
         }
     }
 }

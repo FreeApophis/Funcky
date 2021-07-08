@@ -23,16 +23,10 @@ namespace Funcky.Monads
         private readonly Exception? _error;
 
         internal Result(TValidResult result)
-        {
-            _result = result;
-            _error = null;
-        }
+            => (_result, _error) = (result, null);
 
         private Result(Exception error)
-        {
-            _result = default!;
-            _error = error;
-        }
+            => (_result, _error) = (default!, error);
 
         [Pure]
         public static bool operator ==(Result<TValidResult> lhs, Result<TValidResult> rhs)

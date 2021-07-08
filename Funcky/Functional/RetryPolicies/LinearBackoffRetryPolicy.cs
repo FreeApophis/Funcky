@@ -7,10 +7,7 @@ namespace Funcky
         private readonly TimeSpan _firstDelay;
 
         public LinearBackoffRetryPolicy(int maxRetry, TimeSpan firstDelay)
-        {
-            MaxRetries = maxRetry;
-            _firstDelay = firstDelay;
-        }
+            => (MaxRetries, _firstDelay) = (maxRetry, firstDelay);
 
         public int MaxRetries { get; }
 

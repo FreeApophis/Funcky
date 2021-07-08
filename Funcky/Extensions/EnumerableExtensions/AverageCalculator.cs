@@ -13,10 +13,7 @@ namespace Funcky.Extensions
             private readonly Option<double> _sum;
 
             private AverageCalculatorDouble(int count = default, Option<double> sum = default)
-            {
-                _count = count;
-                _sum = sum;
-            }
+                => (_count, _sum) = (count, sum);
 
             public Option<double> Average => _sum.Select(sum => sum / _count);
 
@@ -47,10 +44,7 @@ namespace Funcky.Extensions
             private readonly int _count;
 
             private AverageCalculatorFloat(int count = default, Option<float> sum = default)
-            {
-                _count = count;
-                _sum = sum;
-            }
+                => (_count, _sum) = (count, sum);
 
             public Option<float> Average => _sum.Select(sum => sum / _count);
 
@@ -69,10 +63,7 @@ namespace Funcky.Extensions
             private readonly int _count;
 
             private AverageCalculatorDecimal(int count = default, Option<decimal> sum = default)
-            {
-                _count = count;
-                _sum = sum;
-            }
+                => (_count, _sum) = (count, sum);
 
             public Option<decimal> Average => _sum.Select(sum => sum / _count);
 

@@ -1,0 +1,16 @@
+using System;
+using System.Diagnostics.Contracts;
+using System.Globalization;
+using Funcky.Monads;
+
+namespace Funcky.Extensions
+{
+    public static partial class ParseExtensions
+    {
+        [Pure]
+        public static Option<{{type}}> Parse{{typeUpper}}OrNone(this string candidate)
+            => {{type}}.TryParse(candidate, out var {{typeLower}}Result)
+        ? {{typeLower}}Result
+        : Option<{{type}}>.None();
+    }
+}

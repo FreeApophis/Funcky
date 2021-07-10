@@ -8,28 +8,10 @@ namespace Funcky.Extensions
     public static partial class ParseExtensions
     {
         [Pure]
-        public static Option<bool> ParseBooleanOrNone(this string candidate)
-            => bool.TryParse(candidate, out var boolResult)
-                ? boolResult
-                : Option<bool>.None();
-
-        [Pure]
-        public static Option<byte> ParseByteOrNone(this string candidate)
-            => byte.TryParse(candidate, out var byteResult)
-                ? byteResult
-                : Option<byte>.None();
-
-        [Pure]
         public static Option<byte> ParseByteOrNone(this string candidate, NumberStyles styles, IFormatProvider provider)
             => byte.TryParse(candidate, styles, provider, out var byteResult)
                 ? byteResult
                 : Option<byte>.None();
-
-        [Pure]
-        public static Option<short> ParseShortOrNone(this string candidate)
-            => short.TryParse(candidate, out var shortResult)
-                ? shortResult
-                : Option<short>.None();
 
         [Pure]
         public static Option<short> ParseShortOrNone(this string candidate, NumberStyles styles, IFormatProvider provider)
@@ -38,22 +20,10 @@ namespace Funcky.Extensions
                 : Option<short>.None();
 
         [Pure]
-        public static Option<int> ParseIntOrNone(this string candidate)
-            => int.TryParse(candidate, out var integerResult)
-                ? Option.Some(integerResult)
-                : Option<int>.None();
-
-        [Pure]
         public static Option<int> ParseIntOrNone(this string candidate, NumberStyles styles, IFormatProvider provider)
             => int.TryParse(candidate, styles, provider, out var integerResult)
                 ? Option.Some(integerResult)
                 : Option<int>.None();
-
-        [Pure]
-        public static Option<long> ParseLongOrNone(this string candidate)
-            => long.TryParse(candidate, out var longResult)
-                ? longResult
-                : Option<long>.None();
 
         [Pure]
         public static Option<long> ParseLongOrNone(this string candidate, NumberStyles styles, IFormatProvider provider)
@@ -62,22 +32,10 @@ namespace Funcky.Extensions
                 : Option<long>.None();
 
         [Pure]
-        public static Option<float> ParseFloatOrNone(this string candidate)
-            => float.TryParse(candidate, out var doubleResult)
-                ? Option.Some(doubleResult)
-                : Option<float>.None();
-
-        [Pure]
         public static Option<float> ParseFloatOrNone(this string candidate, NumberStyles styles, IFormatProvider provider)
             => float.TryParse(candidate, styles, provider, out var doubleResult)
                 ? Option.Some(doubleResult)
                 : Option<float>.None();
-
-        [Pure]
-        public static Option<double> ParseDoubleOrNone(this string candidate)
-            => double.TryParse(candidate, out var doubleResult)
-                ? doubleResult
-                : Option<double>.None();
 
         [Pure]
         public static Option<double> ParseDoubleOrNone(this string candidate, NumberStyles styles, IFormatProvider provider)
@@ -86,34 +44,16 @@ namespace Funcky.Extensions
                 : Option<double>.None();
 
         [Pure]
-        public static Option<decimal> ParseDecimalOrNone(this string candidate)
-            => decimal.TryParse(candidate, out var decimalResult)
-                ? decimalResult
-                : Option<decimal>.None();
-
-        [Pure]
         public static Option<decimal> ParseDecimalOrNone(this string candidate, NumberStyles styles, IFormatProvider provider)
             => decimal.TryParse(candidate, styles, provider, out var decimalResult)
                 ? decimalResult
                 : Option<decimal>.None();
 
         [Pure]
-        public static Option<DateTime> ParseDateTimeOrNone(this string candidate)
-            => DateTime.TryParse(candidate, out var dateTime)
-                ? dateTime
-                : Option<DateTime>.None();
-
-        [Pure]
         public static Option<DateTime> ParseDateTimeOrNone(this string candidate, IFormatProvider provider, DateTimeStyles styles)
             => DateTime.TryParse(candidate, provider, styles, out var dateTime)
                 ? dateTime
                 : Option<DateTime>.None();
-
-        [Pure]
-        public static Option<TimeSpan> ParseTimeSpanOrNone(this string candidate)
-            => TimeSpan.TryParse(candidate, out var timeSpan)
-                ? timeSpan
-                : Option<TimeSpan>.None();
 
         [Pure]
         public static Option<TimeSpan> ParseTimeSpanOrNone(this string candidate, IFormatProvider provider)
